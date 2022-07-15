@@ -1,0 +1,51 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  receive_csv
+
+  Sample SAM Template for receive_csv
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 60
+
+Resources:
+  ReceiveMessFunc:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: recvMessfolder/
+      Handler: app.lambda_handler
+      Runtime: python3.7
+      # Role: arn:aws:iam::549219412834:role/LambdaS3FullAcc
+      Policies:
+        - AmazonSQSFullAccess
+        # - AmazonS3FullAccess
+        - CloudWatchFullAccess
+        - CloudWatchLogsFullAccess
+        - AmazonRDSFullAccess
+      Layers:
+        # - arn:aws:lambda:ap-southeast-2:770693421928:layer:Klayers-p39-numpy:5
+        - arn:aws:lambda:ap-southeast-2:549219412834:layer:pyodbc:1
+        - arn:aws:lambda:ap-southeast-2:336392948345:layer:AWSDataWrangler-Python37:7
+        # - arn:aws:lambda:ap-southeast-2:336392948345:layer:AWSDataWrangler-Python39:7
+      Events:
+        # CreateEvent:
+        #   Type: S3
+        #   Properties:
+        #     Bucket: !Ref SrcBucket
+        #     # Bucket: rawdata-thong
+        #     Events: s3:ObjectCreated:*
+        SQSQueueEvent:
+          Type: SQS
+          Properties:
+            Queue: arn:aws:sqs:ap-southeast-2:549219412834:bridge.fifo
+            BatchSize: 10
+  # SrcBucket:
+  #   Type: AWS::S3::Bucket
+
+  # SimpleQueue:
+  #   Type: AWS::SQS::Queue
+  #   Name: arn:aws:sqs:ap-southeast-2:549219412834:bridge.fifo
+  #   Properties:
+  #     FifoQueue: True

@@ -1,0 +1,46 @@
+{
+  "Records":[
+     {
+        "messageId":"da1a8198-e357-411c-bbc4-2f2ac93e9bbd",
+        "receiptHandle":"AQEBsukVlVWPT8PxsK5Z/bjEkstzTplNum6y6hV7gVj6jX7LkKtxchUlkXWG4QQ673goqeMP8nPtcBEF1aMTqUAF/qibRFqXPA7GLWCNy+G9YzfjQLrhlQlNuhYjUoR6Gtr9kJwasjIebRCMy3Sk0lgNkmsBJgn5tn7NKDpYsGYTgAu4tZYXZ6GhwyfzQT+hNRWuHi+z05icXQdB+WoyzzNeGq+W+85H74LcfDLczT5qY7g5x9rPY8GrYQ6Kn/G+F5VXvdOK8mKJr3MsZeNPSWd52S/me64OQK4jdzKgvbJtv04=",
+        "body":"{\"lambda_arn\": \"arn:aws:lambda:ap-southeast-2:549219412834:function:recvCSVapp-ReceiveCSVFunc-78QJuAD3jS0t\", \"data\": {\"op\": \"U\", \"employeeNumber\": 1702, \"lastName\": \"Murphy\", \"firstName\": \"Origin\", \"extension\": \"x5800\", \"email\": \"dmurphy@classicmodelcars.com\", \"officeCode\": 1, \"reportsTo\": NaN, \"jobTitle\": \"President\"}}",
+        "attributes":{
+           "ApproximateReceiveCount":"6",
+           "SentTimestamp":"1657773835892",
+           "SequenceNumber":"18871134175697904128",
+           "MessageGroupId":"1",
+           "SenderId":"AROAX7YAHFNRKOPFNK6H5:recvCSVapp-ReceiveCSVFunc-78QJuAD3jS0t",
+           "MessageDeduplicationId":"764c8f10b24a2f21a8b798749ec450e74bf73de8ac80ba2d5724421593fabb96",
+           "ApproximateFirstReceiveTimestamp":"1657773835892"
+        },
+        "messageAttributes":{
+           
+        },
+        "md5OfBody":"7a19bdd3159562356a6f2c1dd9563a89",
+        "eventSource":"aws:sqs",
+        "eventSourceARN":"arn:aws:sqs:ap-southeast-2:549219412834:bridge.fifo",
+        "awsRegion":"ap-southeast-2"
+     },
+     {
+        "messageId":"102bd2c0-1184-4a82-ae2b-a6bd733633fe",
+        "receiptHandle":"AQEB+VzWg8KrF4di87uwU3EawmzYo+uZZ9sXEcGVt+Klil+zNSaxsoI5z0rVH4P7lJbRS0DXWwKTCE1MJwidhq3jIHAYQNSVhUU4FkJEPVK4wAojGoAfnD36ofD9BwrDqF3RweB4AyfYxuSg/ugcfOSXvZMGzu8vWAAPTv5xALVnG0klD7PwsyyLqFuwtRbTaKJDxTrUcGaygjax1sV+fMSs4XbfQhjkKkuMR6sMHu0sNi1hF/ipYJ/BrBm2VY6VCcSqX7xNbJbHXvPLPo/9/zASyA1WsQRztW8wX8STO9mlYtk=",
+        "body":"{\"lambda_arn\": \"arn:aws:lambda:ap-southeast-2:549219412834:function:recvCSVapp-ReceiveCSVFunc-78QJuAD3jS0t\", \"data\": {\"op\": \"N\", \"employeeNumber\": 1703, \"lastName\": \"Patterson\", \"firstName\": \"Natalia\", \"extension\": \"x4611\", \"email\": \"mpatterso@classicmodelcars.com\", \"officeCode\": 1, \"reportsTo\": 1002.0, \"jobTitle\": \"VP Sales\"}}",
+        "attributes":{
+           "ApproximateReceiveCount":"6",
+           "SentTimestamp":"1657773835937",
+           "SequenceNumber":"18871134175709423616",
+           "MessageGroupId":"2",
+           "SenderId":"AROAX7YAHFNRKOPFNK6H5:recvCSVapp-ReceiveCSVFunc-78QJuAD3jS0t",
+           "MessageDeduplicationId":"b7711139bf8f933795e80f67bd0041be9559b0fa2893013ccdfb783f4ae41cba",
+           "ApproximateFirstReceiveTimestamp":"1657773835937"
+        },
+        "messageAttributes":{
+           
+        },
+        "md5OfBody":"3276faeab09ddba10e6303ad05ba739a",
+        "eventSource":"aws:sqs",
+        "eventSourceARN":"arn:aws:sqs:ap-southeast-2:549219412834:bridge.fifo",
+        "awsRegion":"ap-southeast-2"
+     }
+  ]
+}
